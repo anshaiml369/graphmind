@@ -1,0 +1,49 @@
+{
+  "source": "cora_citation_network_classification_(1).ipynb \u2014 saved cell outputs (cells 19, 26, 30), copied here before the notebook's outputs were cleared for publication",
+  "note": "Single training run, single seed, Planetoid public split (140 train / 500 val / 1000 test). Values are copied verbatim from the notebook outputs; they were not re-run for this UI.",
+  "split": {
+    "train": 140,
+    "val": 500,
+    "test": 1000
+  },
+  "models": [
+    {
+      "name": "Random Forest (TF-IDF-reweighted word indicators)",
+      "description": "TfidfTransformer on the 1,433 binary word features, RandomForestClassifier(n_estimators=100, max_features='sqrt', class_weight='balanced', random_state=42). No message passing.",
+      "test_accuracy": 0.581,
+      "test_macro_f1": 0.5698
+    },
+    {
+      "name": "Two-layer GCN (SimpleGCN)",
+      "description": "GCNConv(1433\u219232) \u2192 ReLU \u2192 Dropout(0.5) \u2192 GCNConv(32\u21927); Adam lr=0.01; early stopping on validation accuracy (patience 20, stopped at epoch 35, best val acc 0.812). Exported to ONNX (opset 18).",
+      "test_accuracy": 0.792,
+      "test_macro_f1": 0.782
+    }
+  ],
+  "training_log": [
+    {
+      "epoch": 1,
+      "loss": 1.9566,
+      "train_acc": 0.7357,
+      "val_acc": 0.45
+    },
+    {
+      "epoch": 10,
+      "loss": 0.4967,
+      "train_acc": 0.9857,
+      "val_acc": 0.76
+    },
+    {
+      "epoch": 20,
+      "loss": 0.0622,
+      "train_acc": 1.0,
+      "val_acc": 0.8
+    },
+    {
+      "epoch": 30,
+      "loss": 0.0224,
+      "train_acc": 1.0,
+      "val_acc": 0.788
+    }
+  ]
+}
