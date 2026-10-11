@@ -122,6 +122,8 @@ def predict_custom_graph(request: GraphPredictRequest):
         edge_index = np.array(request.edge_indices, dtype=np.int64)
         if edge_index.ndim != 2 or edge_index.shape[0] != 2:
             raise HTTPException(422, "edge_indices must have shape [2, num_edges]")
+        if edge_index.size and (edge_index.min() < 0 or edge_index.max() >= num_nodes):
+            raise HTTPException(422, f"edge_indices must refer to nodes 0 to {num_nodes - 1}")
     else:
         node_ids = np.arange(num_nodes, dtype=np.int64)
         edge_index = np.vstack([node_ids, node_ids])

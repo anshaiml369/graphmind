@@ -6,7 +6,7 @@ services:
     plan: free
     # CPU-only PyTorch: torch is only used by torch-geometric to load the Cora dataset,
     # and the default Linux wheel would pull several GB of unused CUDA libraries.
-    buildCommand: pip install --upgrade pip && pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
     startCommand: uvicorn ui_api:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     autoDeploy: true
