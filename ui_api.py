@@ -1,5 +1,5 @@
 """
-UI adapter for the Cora GCN explorer.
+UI adapter for GraphMind.
 
 This module does NOT change the model, the inference code, or the existing API.
 It imports the existing FastAPI app from main.py and adds read-only endpoints

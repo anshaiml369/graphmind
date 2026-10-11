@@ -1,4 +1,4 @@
-# Cora GCN — citation-graph topic classification
+# GraphMind — citation-graph topic classification
 
 A portfolio project that began from a YouTube tutorial and was extended with a graph-exploration research interface, live re-evaluation of the exported ONNX model, an edge-ablation experiment and documented limitations. In short: a two-layer graph convolutional network (GCN) that classifies papers in the
 Cora citation network into seven topics, served with ONNX Runtime behind FastAPI, with a research-oriented

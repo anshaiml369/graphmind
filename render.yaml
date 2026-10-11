@@ -1,7 +1,7 @@
-# Render Blueprint for the Cora GCN explorer (FastAPI + ONNX Runtime + static frontend).
+# Render Blueprint for GraphMind (FastAPI + ONNX Runtime + static frontend).
 services:
   - type: web
-    name: cora-gcn
+    name: graphmind
     runtime: python
     plan: free
     # CPU-only PyTorch: torch is only used by torch-geometric to load the Cora dataset,

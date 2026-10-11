@@ -80,7 +80,7 @@ def home_page():
     index_file = os.path.join(STATIC_DIR, "index.html")
     if os.path.exists(index_file):
         return FileResponse(index_file)
-    return {"service": "Simple GCN Cora API", "status": "Running"}
+    return {"service": "GraphMind API", "status": "Running"}
 
 
 @app.get("/health")

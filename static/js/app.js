@@ -1,4 +1,4 @@
-/* Cora GCN explorer — frontend logic. Talks to main.py (predictions) and ui_api.py (graph + evaluation). */
+/* GraphMind — frontend logic. Talks to main.py (predictions) and ui_api.py (graph + evaluation). */
 (function () {
   "use strict";
   const { $, $$, el, svg, api, fmt, renderBars, renderMatrix, plotXY, legend, setBusy, setStatus, callout, toast, copyText } = window.RUI;
