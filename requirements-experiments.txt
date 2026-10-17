@@ -1,0 +1,7 @@
+# Research experiment (experiments/, tests/). The web app keeps using requirements.txt.
+# Tested with Python 3.11.14 on macOS (Apple M2, CPU only).
+-r requirements.txt
+scikit-learn==1.7.2
+scipy==1.17.1
+matplotlib==3.11.2
+networkx==3.6.1

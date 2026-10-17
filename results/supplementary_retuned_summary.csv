@@ -1,0 +1,5 @@
+model,graph_condition,n_runs,hparams_retuned_for_condition,test_accuracy_mean,test_accuracy_sd,test_macro_f1_mean,test_macro_f1_sd,main_experiment_test_accuracy_mean,diff_vs_mlp,diff_vs_mlp_seed_ci95,diff_vs_mlp_p
+gat,no_edges,5,lr=0.005 weight_decay=0.005 dropout=0.5 hidden=4 heads=8,0.5764,0.009,0.5589,0.0118,0.4962,-0.0064,"[-0.0212, 0.0084]",0.35
+gat,rewired,5,lr=0.01 weight_decay=0.005 dropout=0.8 hidden=8 heads=8,0.2818,0.0301,0.1964,0.0635,0.2714,-0.301,"[-0.3377, -0.2643]",4e-06
+gcn,no_edges,5,lr=0.005 weight_decay=0.005 dropout=0.5 hidden=64,0.5762,0.0131,0.5612,0.0113,0.5712,-0.0066,"[-0.0244, 0.0112]",0.42
+gcn,rewired,5,lr=0.01 weight_decay=0.005 dropout=0.5 hidden=64,0.3008,0.0084,0.2868,0.0048,0.3008,-0.282,"[-0.2965, -0.2675]",2.1e-10

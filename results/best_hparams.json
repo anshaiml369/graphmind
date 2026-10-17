@@ -1,0 +1,54 @@
+{
+  "mlp": {
+    "hparams": {
+      "lr": 0.005,
+      "weight_decay": 0.005,
+      "dropout": 0.8,
+      "hidden": 64
+    },
+    "mean_val_accuracy": 0.5980000098546346,
+    "mean_val_loss": 1.4768633047739665,
+    "mean_best_epoch": 47.333333333333336,
+    "tuning_seeds": [
+      1000,
+      1001,
+      1002
+    ],
+    "configurations_tried": 16
+  },
+  "gcn": {
+    "hparams": {
+      "lr": 0.01,
+      "weight_decay": 0.005,
+      "dropout": 0.5,
+      "hidden": 64
+    },
+    "mean_val_accuracy": 0.809333344300588,
+    "mean_val_loss": 0.7805497248967489,
+    "mean_best_epoch": 28.333333333333332,
+    "tuning_seeds": [
+      1000,
+      1001,
+      1002
+    ],
+    "configurations_tried": 16
+  },
+  "gat": {
+    "hparams": {
+      "lr": 0.005,
+      "weight_decay": 0.005,
+      "dropout": 0.8,
+      "hidden": 8,
+      "heads": 8
+    },
+    "mean_val_accuracy": 0.8140000104904175,
+    "mean_val_loss": 1.2646586100260417,
+    "mean_best_epoch": 137.33333333333334,
+    "tuning_seeds": [
+      1000,
+      1001,
+      1002
+    ],
+    "configurations_tried": 16
+  }
+}

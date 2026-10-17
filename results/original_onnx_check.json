@@ -1,0 +1,26 @@
+{
+  "original_graph": {
+    "val": {
+      "accuracy": 0.792,
+      "macro_f1": 0.7751359205130255,
+      "weighted_f1": 0.7932131643076601
+    },
+    "test": {
+      "accuracy": 0.792,
+      "macro_f1": 0.7824023525176959,
+      "weighted_f1": 0.7936676333244594
+    }
+  },
+  "edges_replaced_by_self_loops": {
+    "val": {
+      "accuracy": 0.684,
+      "macro_f1": 0.6612953670572568,
+      "weighted_f1": 0.6874427620897144
+    },
+    "test": {
+      "accuracy": 0.678,
+      "macro_f1": 0.6612958107573482,
+      "weighted_f1": 0.682406718812712
+    }
+  }
+}

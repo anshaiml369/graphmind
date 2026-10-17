@@ -1,0 +1,5 @@
+graph_condition,n_graphs,nodes,undirected_edges,directed_edges,density,mean_degree,max_degree,isolated_nodes,connected_components,largest_component_nodes,edge_homophily,average_clustering
+original,5,2708.0,5278.0,10556.0,0.0014,3.8981,168.0,0.0,78.0,2485.0,0.81,0.2407
+no_edges,5,2708.0,0.0,0.0,0.0,0.0,0.0,2708.0,2708.0,1.0,undefined (no edges),0.0
+rewired,5,2708.0,5278.0,10556.0,0.0014,3.8981,168.0,0.0,13.0000 ± 3.8079,2682.6000 ± 9.0443,0.1688 ± 0.0035,0.0076 ± 0.0014
+drop50,5,2708.0,2639.0,5278.0,0.0007,1.949,83.4000 ± 7.1972,493.4000 ± 15.4855,648.4000 ± 5.5946,1737.2000 ± 38.6355,0.8064 ± 0.0064,0.0662 ± 0.0035

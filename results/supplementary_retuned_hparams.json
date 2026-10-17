@@ -1,0 +1,40 @@
+{
+  "gcn__no_edges": {
+    "hparams": {
+      "lr": 0.005,
+      "weight_decay": 0.005,
+      "dropout": 0.5,
+      "hidden": 64
+    },
+    "mean_val_accuracy": 0.6060000061988831
+  },
+  "gcn__rewired": {
+    "hparams": {
+      "lr": 0.01,
+      "weight_decay": 0.005,
+      "dropout": 0.5,
+      "hidden": 64
+    },
+    "mean_val_accuracy": 0.3406666616598765
+  },
+  "gat__no_edges": {
+    "hparams": {
+      "lr": 0.005,
+      "weight_decay": 0.005,
+      "dropout": 0.5,
+      "hidden": 4,
+      "heads": 8
+    },
+    "mean_val_accuracy": 0.6006666421890259
+  },
+  "gat__rewired": {
+    "hparams": {
+      "lr": 0.01,
+      "weight_decay": 0.005,
+      "dropout": 0.8,
+      "hidden": 8,
+      "heads": 8
+    },
+    "mean_val_accuracy": 0.32333333293596905
+  }
+}

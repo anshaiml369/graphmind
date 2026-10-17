@@ -1,0 +1,51 @@
+mlp {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.5720
+mlp {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.5893
+mlp {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.5220
+mlp {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.5880
+mlp {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.5693
+mlp {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.5973
+mlp {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.5367
+mlp {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.5920
+mlp {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.5693
+mlp {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.5907
+mlp {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.5773
+mlp {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.5953
+mlp {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.5753
+mlp {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.5960
+mlp {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.5773
+mlp {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.5980
+==> mlp: {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 64} (mean val acc 0.5980)
+gcn {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.7927
+gcn {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.8067
+gcn {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.7953
+gcn {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.8033
+gcn {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.8000
+gcn {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.8093
+gcn {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.8053
+gcn {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.8013
+gcn {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.7947
+gcn {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.8053
+gcn {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.7933
+gcn {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.8053
+gcn {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 16} mean val acc 0.7953
+gcn {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 64} mean val acc 0.7993
+gcn {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 16} mean val acc 0.8093
+gcn {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 64} mean val acc 0.8040
+==> gcn: {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 64} (mean val acc 0.8093)
+gat {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 4, 'heads': 8} mean val acc 0.7980
+gat {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 8, 'heads': 8} mean val acc 0.8053
+gat {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 4, 'heads': 8} mean val acc 0.8073
+gat {'lr': 0.01, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 8, 'heads': 8} mean val acc 0.8000
+gat {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 4, 'heads': 8} mean val acc 0.8060
+gat {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 8, 'heads': 8} mean val acc 0.8113
+gat {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 4, 'heads': 8} mean val acc 0.8127
+gat {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 8, 'heads': 8} mean val acc 0.8120
+gat {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 4, 'heads': 8} mean val acc 0.8007
+gat {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.5, 'hidden': 8, 'heads': 8} mean val acc 0.8053
+gat {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 4, 'heads': 8} mean val acc 0.8093
+gat {'lr': 0.005, 'weight_decay': 0.0005, 'dropout': 0.8, 'hidden': 8, 'heads': 8} mean val acc 0.8053
+gat {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 4, 'heads': 8} mean val acc 0.8040
+gat {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 8, 'heads': 8} mean val acc 0.8040
+gat {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 4, 'heads': 8} mean val acc 0.8067
+gat {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 8, 'heads': 8} mean val acc 0.8140
+==> gat: {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 8, 'heads': 8} (mean val acc 0.8140)

@@ -1,0 +1,24 @@
+==> gcn no_edges: {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 64} (mean val acc 0.6060)
+gcn__no_edges__retuned__seed0 test acc 0.586
+gcn__no_edges__retuned__seed1 test acc 0.586
+gcn__no_edges__retuned__seed2 test acc 0.559
+gcn__no_edges__retuned__seed3 test acc 0.565
+gcn__no_edges__retuned__seed4 test acc 0.585
+==> gcn rewired: {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 64} (mean val acc 0.3407)
+gcn__rewired__retuned__seed0 test acc 0.295
+gcn__rewired__retuned__seed1 test acc 0.289
+gcn__rewired__retuned__seed2 test acc 0.305
+gcn__rewired__retuned__seed3 test acc 0.308
+gcn__rewired__retuned__seed4 test acc 0.307
+==> gat no_edges: {'lr': 0.005, 'weight_decay': 0.005, 'dropout': 0.5, 'hidden': 4, 'heads': 8} (mean val acc 0.6007)
+gat__no_edges__retuned__seed0 test acc 0.575
+gat__no_edges__retuned__seed1 test acc 0.590
+gat__no_edges__retuned__seed2 test acc 0.578
+gat__no_edges__retuned__seed3 test acc 0.565
+gat__no_edges__retuned__seed4 test acc 0.574
+==> gat rewired: {'lr': 0.01, 'weight_decay': 0.005, 'dropout': 0.8, 'hidden': 8, 'heads': 8} (mean val acc 0.3233)
+gat__rewired__retuned__seed0 test acc 0.238
+gat__rewired__retuned__seed1 test acc 0.284
+gat__rewired__retuned__seed2 test acc 0.318
+gat__rewired__retuned__seed3 test acc 0.298
+gat__rewired__retuned__seed4 test acc 0.271

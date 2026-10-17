@@ -1,0 +1,39 @@
+{
+  "dataset": {
+    "name": "Cora",
+    "root": "data/Planetoid",
+    "split": "public",
+    "feature_preprocessing": "none (binary word indicators, as in the original notebook)"
+  },
+  "training": {
+    "max_epochs": 500,
+    "patience": 100,
+    "selection_metric": "val_accuracy (ties broken by lower val_loss)",
+    "optimizer": "Adam",
+    "num_threads": 1
+  },
+  "tuning": {
+    "seeds": [1000, 1001, 1002],
+    "graph_condition": "original",
+    "criterion": "mean validation accuracy over tuning seeds (ties broken by mean validation loss)",
+    "grids": {
+      "mlp": {"lr": [0.01, 0.005], "weight_decay": [0.0005, 0.005], "dropout": [0.5, 0.8], "hidden": [16, 64]},
+      "gcn": {"lr": [0.01, 0.005], "weight_decay": [0.0005, 0.005], "dropout": [0.5, 0.8], "hidden": [16, 64]},
+      "gat": {"lr": [0.01, 0.005], "weight_decay": [0.0005, 0.005], "dropout": [0.5, 0.8], "hidden": [4, 8], "heads": [8]}
+    }
+  },
+  "evaluation": {
+    "seeds": [0, 1, 2, 3, 4],
+    "conditions": {
+      "mlp": ["original"],
+      "gcn": ["original", "no_edges", "rewired", "drop50"],
+      "gat": ["original", "no_edges", "rewired", "drop50"]
+    }
+  },
+  "graph_conditions": {
+    "original": "Cora citation graph as distributed by PyG (5,278 undirected edges).",
+    "no_edges": "All citation edges removed; only the self-loops the GNN layers add themselves remain. Retrained.",
+    "rewired": "Degree-preserving random rewiring (networkx double_edge_swap, 10 x |E| swaps, seed = run seed): every node keeps its degree, but who it is connected to is randomised.",
+    "drop50": "50% of undirected edges removed uniformly at random (seed = run seed); both directions of a removed edge are dropped."
+  }
+}

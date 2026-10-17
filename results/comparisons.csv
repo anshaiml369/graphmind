@@ -1,0 +1,4 @@
+A,B,pairing,accuracy_A_mean,accuracy_B_mean,accuracy_diff,accuracy_seed_ci95,accuracy_p,accuracy_A_better_in_seeds,macro_f1_A_mean,macro_f1_B_mean,macro_f1_diff,macro_f1_seed_ci95,macro_f1_p,macro_f1_A_better_in_seeds,accuracy_test_sample_ci95,accuracy_p_holm,macro_f1_p_holm
+GCN (original graph),MLP (original graph),independent (Welch),0.8226,0.5828,0.2398,"[0.2260, 0.2536]",3.2e-09,5/5,0.8136,0.5671,0.2465,"[0.2375, 0.2555]",6.8e-12,5/5,"[0.2120, 0.2678]",6.3e-09,2e-11
+GAT (original graph),MLP (original graph),independent (Welch),0.8174,0.5828,0.2346,"[0.2180, 0.2512]",9e-10,5/5,0.8112,0.5671,0.2441,"[0.2305, 0.2577]",2.5e-09,5/5,"[0.2064, 0.2626]",2.7e-09,5e-09
+GCN (original graph),GAT (original graph),independent (Welch),0.8226,0.8174,0.0052,"[-0.0093, 0.0197]",0.42,3/5,0.8136,0.8112,0.0024,"[-0.0110, 0.0158]",0.67,3/5,"[-0.0086, 0.0188]",0.42,0.67
