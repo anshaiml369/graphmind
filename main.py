@@ -11,14 +11,17 @@ from fastapi.staticfiles import StaticFiles
 import onnxruntime as ort
 
 
+# Planetoid label ids -> Cora topics. The order follows the class sizes in the data: PyG's counts
+# [351, 217, 418, 818, 426, 298, 180] match Cora's published topic sizes only in this order
+# (Neural_Networks is the largest topic, 818 papers). An earlier alphabetical mapping was wrong.
 CORA_CLASSES = {
-    0: "Case_Based",
-    1: "Genetic_Algorithms",
-    2: "Neural_Networks",
-    3: "Probabilistic_Methods",
-    4: "Reinforcement_Learning",
-    5: "Rule_Learning",
-    6: "Theory",
+    0: "Theory",
+    1: "Reinforcement_Learning",
+    2: "Genetic_Algorithms",
+    3: "Neural_Networks",
+    4: "Probabilistic_Methods",
+    5: "Case_Based",
+    6: "Rule_Learning",
 }
 
 BASE_DIR    = os.path.dirname(__file__)

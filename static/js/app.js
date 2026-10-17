@@ -8,8 +8,8 @@
   // Colour-blind-aware categorical palette (Paul Tol "muted" + Okabe–Ito orange), one per Cora class id.
   const COLORS = ["#CC6677", "#999933", "#332288", "#44AA99", "#E69F00", "#88CCEE", "#882255"];
   let CLASSES = {
-    0: "Case_Based", 1: "Genetic_Algorithms", 2: "Neural_Networks", 3: "Probabilistic_Methods",
-    4: "Reinforcement_Learning", 5: "Rule_Learning", 6: "Theory",
+    0: "Theory", 1: "Reinforcement_Learning", 2: "Genetic_Algorithms", 3: "Neural_Networks",
+    4: "Probabilistic_Methods", 5: "Case_Based", 6: "Rule_Learning",
   };
   const name = (id) => fmt.label(CLASSES[id] ?? `class ${id}`);
 
