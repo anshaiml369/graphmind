@@ -57,7 +57,7 @@ exactly. Its validation accuracy is **0.792**, although the notebook logged a be
 | **B2** | The 0.678 "no citation links" figure is an **inference-time** intervention on a model trained with edges. | `ui_api.py` `_load()`. | It measures how a graph-trained model degrades under a distribution shift, not what can be learned without the graph. It **under**states the graph's contribution: a GCN trained with edges and evaluated without them scores 0.696 ± 0.013 (our runs), while models trained without edges score 0.571–0.583 (§9). | Ablations are **retrained** on each graph; the inference-time number is kept as a separate column for comparison. |
 | **B3** | No random seeds; one run. | Notebook. | No variance estimate; not reproducible. | Python/NumPy/PyTorch seeded, deterministic kernels, 1 CPU thread; 5 evaluation seeds per condition; reruns verified bit-identical (§10). |
 | **B4** | Hyperparameters were not tuned, and the comparison baseline (RF) was not tuned either. | Notebook. | Comparison may reflect tuning effort, not model class. | Same grid size (16 configs) for every model, tuned on validation only with separate tuning seeds. |
-| **B5** | `CORA_CLASSES` in `main.py` maps label ids to topic names alphabetically. PyG's class sizes [351, 217, 418, 818, 426, 298, 180] match Cora's published topic sizes only in the order Theory, Reinforcement_Learning, Genetic_Algorithms, Neural_Networks, Probabilistic_Methods, Case_Based, Rule_Learning (Neural_Networks is the 818-paper class). | Class counts. | The web app shows **wrong topic names** (e.g. label 3 shown as "Probabilistic_Methods"). Metrics are unaffected (they use ids). | Correct names used in `experiments/common.py`. **Not changed in the app** (out of scope; see §11). |
+| **B5** | `CORA_CLASSES` in `main.py` maps label ids to topic names alphabetically. PyG's class sizes [351, 217, 418, 818, 426, 298, 180] match Cora's published topic sizes only in the order Theory, Reinforcement_Learning, Genetic_Algorithms, Neural_Networks, Probabilistic_Methods, Case_Based, Rule_Learning (Neural_Networks is the 818-paper class). | Class counts. | The web app showed **wrong topic names** (e.g. label 3 shown as "Probabilistic_Methods"). Metrics are unaffected (they use ids). | Correct names used in `experiments/common.py`; **fixed in the app** in commit 8042c6a (`main.py`, `static/js/app.js`). |
 | B6 | Notebook text says the Random Forest also uses degree features; the code uses word features only. | Cells 15–19. | Documentation error. | Noted; RF is not part of this study. |
 
 **Leakage checks (verified).**
@@ -321,8 +321,6 @@ transform. The `rewired` collapse is **not** a tuning artefact.
   accuracy is unaffected because it is measured separately).
 * **Duplicate feature vectors** across splits (one train–test pair, three val–test groups) — negligible effect,
   not removed so as not to alter the split.
-* **Label-name bug in the app (B5) is not fixed in this branch** to keep the original application unchanged; it
-  should be fixed separately (`main.py` `CORA_CLASSES`).
 * **Class imbalance:** training is balanced (20 per class) but test is not; Neural_Networks is under-predicted.
 
 ## 12. Future experiments and reproduction

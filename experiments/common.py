@@ -17,7 +17,7 @@ RESULTS_DIR = os.path.join(REPO_ROOT, "results")
 
 # Planetoid label ids -> Cora topics. Inferred from class sizes: PyG's counts [351, 217, 418, 818, 426, 298, 180]
 # match Cora's published topic sizes only in this order (Neural_Networks is the largest topic, 818 papers).
-# Note: main.py's CORA_CLASSES assumes alphabetical order, which mislabels the topics (RESEARCH_REPORT.md, B5).
+# main.py's CORA_CLASSES used an alphabetical order until commit 8042c6a (RESEARCH_REPORT.md, B5).
 CLASS_NAMES = ["Theory", "Reinforcement_Learning", "Genetic_Algorithms", "Neural_Networks",
                "Probabilistic_Methods", "Case_Based", "Rule_Learning"]
 GRAPH_CONDITIONS = ("original", "no_edges", "rewired", "drop50")

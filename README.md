@@ -101,12 +101,12 @@ Added by `ui_api.py` (read-only): `GET /api/ui/overview`, `GET /api/ui/evaluatio
 - Transductive: test nodes' features and edges are present at inference time.
 - Planetoid Cora has no raw text or vocabulary, so the UI cannot show words or accept free text.
 - The notebook text says the Random Forest also uses degree features; the code uses TF-IDF word features only.
-- `CORA_CLASSES` in `main.py` maps label ids to topic names alphabetically. PyG's class sizes indicate the order
-  Theory, Reinforcement_Learning, Genetic_Algorithms, Neural_Networks, Probabilistic_Methods, Case_Based,
-  Rule_Learning, so the UI's topic names are wrong; accuracy figures are unaffected (RESEARCH_REPORT.md, B5).
+- Fixed: topic names were mapped to label ids alphabetically, so the UI showed wrong topic names. They now follow
+  PyG's class sizes (Theory, Reinforcement_Learning, Genetic_Algorithms, Neural_Networks, Probabilistic_Methods,
+  Case_Based, Rule_Learning); accuracy figures were never affected (RESEARCH_REPORT.md, B5).
 
 The seed, checkpoint and ablation issues above are corrected in the research experiment (`experiments/`); the
-shipped ONNX model and the web app are deliberately left unchanged.
+shipped ONNX model is deliberately left unchanged.
 
 ## Deployment notes
 
